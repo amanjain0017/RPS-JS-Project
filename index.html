@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- heading of game with scores -->
+    <div class="heading-container">
+      <div class="header">
+        <div class="title">
+          <h1>
+            ROCK <br />
+            PAPER <br />
+            SCISSORS
+          </h1>
+        </div>
+
+        <div class="scoreboard">
+          <div class="scores">
+            <p>COMPUTER <br />SCORE</p>
+            <p id="computer-score">0</p>
+          </div>
+          <div class="scores">
+            <p>
+              YOUR <br />
+              SCORE
+            </p>
+            <p id="player-score">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- option to select for player -->
+    <div class="game-container hidden">
+      <div class="choices">
+        <!-- <img src="./assets/triangle.png" alt= "triangle" class="triangle" /> -->
+
+        <div class="choice rock">
+          <img src="./assets/rock.png" alt="rock" />
+        </div>
+        <div class="choice paper">
+          <img src="./assets/paper.png" alt="paper" />
+        </div>
+        <div class="choice scissors">
+          <img src="./assets/scissors.png" alt="scissors" />
+        </div>
+
+        <div class="line line-rp"></div>
+        <div class="line line-ps"></div>
+        <div class="line line-rs"></div>
+      </div>
+    </div>
+
+    <!-- rules button -->
+    <div class="rules-container">
+      <button class="rules-button" id="rulesBtn">RULES</button>
+
+      <!-- rules popup -->
+      <div class="hidden popup" id="rulesPopup">
+        <button class="cancel-button" id="cancelBtn">X</button>
+
+        <h2>Game Rules</h2>
+        <ul>
+          <li>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li>
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- game result page -->
+    <div class="game-outcome-container hidden">
+      <!-- player and pc have picked something -->
+      <div class="player-choice">
+        <p>YOU PICKED</p>
+        <div class="choice scissors">
+          <img src="./assets/scissors.png" alt="scissors" />
+        </div>
+      </div>
+
+      <!-- when one of player or computer wins case or draw -->
+      <div class="game-result">
+        <p class="game-mssg">
+          YOU LOST <br />
+          AGAINST PC
+        </p>
+        <button class="playAgainBtn">PLAY AGAIN</button>
+      </div>
+
+      <div class="computer-choice">
+        <p>PC PICKED</p>
+        <div class="choice rock">
+          <img src="./assets/rock.png" alt="rock" />
+        </div>
+      </div>
+    </div>
+
+    <!-- winning page -->
+    <div class="hurray-container hidden">
+      <div class="player-win">
+        <img src="./assets/trophy.png" alt="trophy" />
+        <h3>HURRAY!!</h3>
+        <p>YOU WON THE GAME</p>
+
+        <button class="playAgainBtn">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- next button when player wins -->
+    <button class="next-button hidden">NEXT</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
