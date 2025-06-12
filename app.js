@@ -114,7 +114,7 @@ const displayChoiceAndResult = (playerChoice, computerChoice) => {
   gameOutcomeContainer.classList.remove("hidden");
   headingContainer.classList.remove("hidden");
 
-  //updating images and classes of plaer and pc
+  //updating images and classes of player and pc
   playerPickContainer.className = `choice ${playerChoice}`;
   pcPickContainer.className = `choice ${computerChoice}`;
 

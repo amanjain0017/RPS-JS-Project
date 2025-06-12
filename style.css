@@ -318,9 +318,29 @@ li::marker {
   margin-bottom: 30px;
 }
 
+@keyframes pulse-glow {
+  0% {
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1),
+      0 0 0 0px rgba(40, 154, 39, 0.7); /* Start with inner shadow, no outer glow */
+  }
+  50% {
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1),
+      0 0 0 20px rgba(40, 154, 39, 0.7),
+      /* Initial full glow */ 0 0 0 40px rgba(40, 154, 39, 0.5),
+      0 0 0 55px rgba(40, 154, 39, 0.3);
+  }
+  100% {
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1),
+      0 0 0 0px rgba(40, 154, 39, 0.7); /* Return to no outer glow */
+  }
+}
+
 .player-choice .choice.winner-effect,
 .computer-choice .choice.winner-effect {
   box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1),
-    0 0 0 20px rgba(40, 154, 039, 0.7), 0 0 0 40px rgba(40, 154, 039, 0.5),
-    0 0 0 55px rgba(40, 154, 039, 0.3);
+    0 0 0 20px rgba(40, 154, 39, 0.7), 0 0 0 40px rgba(40, 154, 39, 0.5),
+    0 0 0 55px rgba(40, 154, 39, 0.3);
+
+  animation: pulse-glow 2s ease-out infinite alternate;
+  /* Pulsing glow */
 }
