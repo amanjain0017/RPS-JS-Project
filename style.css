@@ -341,6 +341,5 @@ li::marker {
     0 0 0 20px rgba(40, 154, 39, 0.7), 0 0 0 40px rgba(40, 154, 39, 0.5),
     0 0 0 55px rgba(40, 154, 39, 0.3);
 
-  animation: pulse-glow 2s ease-out infinite alternate;
-  /* Pulsing glow */
+  animation: pulse-glow 2.5s ease-out infinite alternate; /* Pulsing glow */
 }
